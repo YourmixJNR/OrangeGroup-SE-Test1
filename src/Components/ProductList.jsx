@@ -3,6 +3,7 @@ import ProductNav from "./Layouts/ProductNav";
 import AppContext from "../Context/AppContext";
 import { useContext } from "react";
 import "./ProductList.css";
+import { Link } from "react-router-dom";
 
 const ProductList = () => {
   const { products } = useContext(AppContext);
@@ -16,12 +17,16 @@ const ProductList = () => {
             <div className="cat-img">
               <img src={product.image} alt={product.name} />
             </div>
-            <div className="product-words">
-              <h2>{product.star}</h2>
+            <div className="product-details">
               <p>{product.name}</p>
-              <b>
+              <h2>{product.star}</h2>
+              <strong>
                 ${product.discount} <del>${product.price}</del>
-              </b>
+              </strong>
+              <br />
+              <Link to="/#" className="view-details">
+                View Details
+              </Link>
             </div>
           </div>
         ))}
