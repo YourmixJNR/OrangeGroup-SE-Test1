@@ -1,51 +1,82 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import "./ProductDetail.css";
 
 const ProductDetail = () => {
+  const [product, setProduct] = useState({});
+  const [value, setValue] = useState(1);
+
+  const handleChanges = (e) => {
+    setValue(e.target.value);
+  };
+
+  const { id } = useParams();
+
+  const fetchProduct = async () => {
+    try {
+      const response = await fetch(`http://localhost:5000/products/${id}`);
+      if (!response.ok) throw new Error(response.statusText);
+      const data = await response.json();
+      setProduct(data);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+      // Handle any errors that occur during the data fetching process
+    }
+  };
+
+  useEffect(() => {
+    fetchProduct();
+  }, [id]);
+
   return (
-    <section class="product-container">
-      <div class="img-card">
-        <img src="img/image-1.png" alt="" id="featured-image" />
-      </div>
-      {/* <!-- Right side --> */}
-      <div class="product-info">
-        <h3>LEVI'S® WOMEN'S XL TRUCKER JACKET</h3>
-        <h5>
-          Price: $140 <del>$170</del>
-        </h5>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-          accusantium, aspernatur provident beatae corporis veniam atque
-          facilis, consequuntur assumenda, vitae dignissimos iste exercitationem
-          dolor eveniet alias eos ullam nesciunt voluptatum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-          accusamus natus dolorum. Quaerat nulla quod doloremque, officia quis
-          provident amet adipisci unde esse iure delectus, maxime inventore
-          optio fuga nisi?
-        </p>
+    <div>
+      <ol className="breadcrumb">
+        <li>
+          <Link to="/">Latest Products</Link>
+        </li>
+        <li className="active">Cart</li>
+      </ol>
 
-        <div class="sizes">
-          <p>Size:</p>
-          <select name="Size" id="size" class="size-option">
-            <option value="xxl">XXL</option>
-            <option value="xl">XL</option>
-            <option value="medium">Medium</option>
-            <option value="small">Small</option>
-          </select>
+      <section className="product-container">
+        <div className="img-card">
+          <img src={product.image} alt="" id="featured-image" />
         </div>
+        <div className="product-info">
+          <h3>{product.name}</h3>
+          <h5>
+            Price: ${product.discount} <del>${product.price}</del>
+          </h5>
+          <p>
+            {product.description}
+          </p>
+          <div className="sizes">
+            <p>Size:</p>
+            <select name="Size" id="size" className="size-option">
+              <option value="xxl">XXL</option>
+              <option value="xl">XL</option>
+              <option value="medium">Medium</option>
+              <option value="small">Small</option>
+            </select>
+          </div>
 
-        <div class="quantity">
-          <input type="number" value="1" min="1" v />
-          <button>Add to Cart</button>
-        </div>
+          <div className="quantity">
+            <input
+              type="number"
+              value={value}
+              onChange={(e) => {
+                handleChanges(e);
+              }}
+            />
+            <button>Add to Cart</button>
+          </div>
 
-        <div>
-          <p>Delivery:</p>
+          <div>
+            <p>Category:</p>
+            <p>{product.category}</p>
+          </div>
         </div>
-        
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

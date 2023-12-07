@@ -29,7 +29,7 @@
     color: #fff;
     background-color: rgb(241, 185, 41);
     border-radius: 5px;
-    text-decoration:none;
+    text-decoration: none;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -39,9 +39,7 @@
 
 .view-details:hover {
     background-color: #000;
-    /* color: rgb(241, 185, 41); */
 }
-
 
 @media (min-width: 1200px) {
     .products-con {
