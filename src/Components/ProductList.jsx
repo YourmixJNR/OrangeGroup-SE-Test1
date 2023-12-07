@@ -14,13 +14,13 @@ const ProductList = () => {
         {products.map((product) => (
           <div className="product" key={product.id}>
             <div className="cat-img">
-              <img src={product.image} alt={product.description} />
+              <img src={product.image} alt={product.name} />
             </div>
             <div className="product-words">
-              <h2>★ ★ ★ ★ ★</h2>
-              <p>{product.description}</p>
+              <h2>{product.star}</h2>
+              <p>{product.name}</p>
               <b>
-                $40.00 <del>{product.price}</del>
+                ${product.discount} <del>${product.price}</del>
               </b>
             </div>
           </div>

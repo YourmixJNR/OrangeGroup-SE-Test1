@@ -30,7 +30,7 @@
         {
             "id": 4,
             "image": "Images/product4.webp",
-            "name": "Product 4 Name",
+            "name": "Clothe",
             "price": 400.00,
             "discount": 200.00,
             "star": "★ ★ ★ ★ ★",
