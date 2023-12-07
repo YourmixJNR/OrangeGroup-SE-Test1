@@ -8,6 +8,7 @@ import {
 import './App.css';
 import ProductList from './Components/ProductList';
 import AppProvider from './Components/AppProvider';
+import ProductDetail from './Components/ProductDetail';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<ProductList />} />
+            <Route path='/product-detail' element={<ProductDetail />} />
           </Routes>
         </BrowserRouter>
       </AppProvider>
