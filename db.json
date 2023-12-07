@@ -3,44 +3,56 @@
         {
             "id": 1,
             "image": "Images/product1.webp",
-            "name": "Product 1 Name",
+            "name": "Short",
             "price": 100.00,
-            "description": "Product 1 Description"
+            "discount": 50.00,
+            "star": "★ ★ ★ ★ ★",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         },
         {
             "id": 2,
             "image": "Images/product2.webp",
-            "name": "Product 2 Name",
+            "name": "Sweater",
             "price": 200.00,
-            "description": "Product 2 Description"
+            "discount": 100.00,
+            "star": "★ ★ ★",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         },
         {
             "id": 3,
             "image": "Images/product3.webp",
-            "name": "Product 3 Name",
+            "name": "Hoodie",
             "price": 300.00,
-            "description": "Product 3 Description"
+            "discount": 150.00,
+            "star": "★ ★ ★ ★ ★",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         },
         {
             "id": 4,
             "image": "Images/product4.webp",
             "name": "Product 4 Name",
             "price": 400.00,
-            "description": "Product 4 Description"
+            "discount": 200.00,
+            "star": "★ ★ ★ ★ ★",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         },
         {
             "id": 5,
             "image": "Images/product5.webp",
-            "name": "Product 5 Name",
+            "name": "Long",
             "price": 500.00,
-            "description": "Product 5 Description"
+            "discount": 250.000,
+            "star": "★ ★ ★",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         },
         {
             "id": 6,
             "image": "Images/product6.webp",
-            "name": "Product 6 Name",
+            "name": "Suit",
             "price": 600.00,
-            "description": "Product 6 Description"
+            "discount": 300.00,
+            "star": "★ ★ ★",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         }
     ]
 }
