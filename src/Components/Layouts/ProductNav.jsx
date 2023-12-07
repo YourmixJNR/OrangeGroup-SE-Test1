@@ -4,7 +4,7 @@ import './ProductNav.css'
 const ProductNav = () => {
 
   return (
-    <nav className="latest">
+    <nav>
       <div className="product-nav">
         <h1>Latest Products</h1>
         <ul>

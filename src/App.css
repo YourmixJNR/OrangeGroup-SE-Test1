@@ -4,3 +4,8 @@ body {
   text-decoration: none;
   outline: none; border:none;
 }
+
+.latest {
+  width: 84%;
+  margin: 1em auto;
+}

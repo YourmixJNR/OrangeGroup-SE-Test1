@@ -1,19 +1,14 @@
-.latest {
-    width: 84%;
-    margin: 1em auto;
-}
-
-.latest div h1 {
+nav div h1 {
     margin-left: 20px;
 }
 
-.latest div ul {
+nav div ul {
     list-style: none;
     display: flex;
     padding: 0;
 }
 
-.latest div ul li {
+nav div ul li {
     margin: 0 10px;
     padding: 0 10px;
     cursor: pointer;
@@ -24,11 +19,7 @@
     -ms-transition: .5s all;
 }
 
-.latest div ul li:hover {
-    color: red;
-}
-
-.latest div ul li:first-child {
+nav div ul li:hover {
     color: red;
 }
 

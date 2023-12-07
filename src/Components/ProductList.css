@@ -1,0 +1,39 @@
+.product .cat-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product {
+    margin: 2em 0;
+}
+
+.product .product-words {
+    text-align: center;
+}
+
+.product .product-words del {
+    color: red;
+    margin: 0 10px;
+}
+
+.product .product-words h2 {
+    color: rgb(241, 185, 41);
+}
+
+@media (min-width: 1200px) {
+    .products-con {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media(min-width:768px) {
+    .product .product-words {
+        text-align: center;
+    }
+
+    .product .product-words b {
+        font-size: 18px;
+    }
+}
