@@ -1,0 +1,46 @@
+.latest {
+    width: 84%;
+    margin: 1em auto;
+}
+
+.latest div h1 {
+    margin-left: 20px;
+}
+
+.latest div ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.latest div ul li {
+    margin: 0 10px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+}
+
+.latest div ul li:hover {
+    color: red;
+}
+
+.latest div ul li:first-child {
+    color: red;
+}
+
+@media(min-width:1200px) {
+    .product-nav {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #D8D8D8;
+    }
+
+    .product-nav h1 {
+        width: 70%;
+        font-size: 50px;
+    }
+}
