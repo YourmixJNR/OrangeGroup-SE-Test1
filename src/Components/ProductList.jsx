@@ -24,7 +24,7 @@ const ProductList = () => {
                 ${product.discount} <del>${product.price}</del>
               </strong>
               <br />
-              <Link to="/#" className="view-details">
+              <Link to={`/${product.id}`} className="view-details">
                 View Details
               </Link>
             </div>
